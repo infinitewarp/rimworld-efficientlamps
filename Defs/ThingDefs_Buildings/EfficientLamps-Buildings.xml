@@ -2,7 +2,7 @@
 <Buildings>
   <!-- Unfortunately, it seems I can't extend the abstract StandingLampBase and simply override power attributes. -->
   <!-- TODO Figure out an implmentation that doesn't require copy-pasting the whole StandingLampBase to redefine it. -->
-  <!-- CFL Standing Lamps -->
+  <!-- CFL Standing Lamps (abstract base) -->
   <ThingDef Abstract="True" Name="EfficientLampCFLBase" ParentName="BuildingBase">
     <thingClass>Building</thingClass>
     <category>Building</category>
@@ -46,6 +46,7 @@
       <Flammability>1.0</Flammability>
     </statBases>
   </ThingDef>
+  <!-- CFL White Standing Lamp -->
   <ThingDef ParentName="EfficientLampCFLBase">
     <defName>EfficientLampCFL</defName>
     <label>Standing lamp (CFL)</label>
@@ -60,7 +61,59 @@
       <li>EfficientLampCFLs</li>
     </researchPrerequisites>
   </ThingDef>
-  <!-- LED Standing Lamps -->
+  <!-- CFL Sun Lamp -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>EfficientSunLampCFL</defName>
+    <label>sun lamp (CFL)</label>
+    <thingClass>Building_SunLamp</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Production/LampSun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.4, 0.2)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>330</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <description>Efficiently lights an area brightly enough to grow crops.</description>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+    <researchPrerequisites>
+      <li>EfficientLampCFLs</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- LED Standing Lamps (abstract base) -->
   <ThingDef Abstract="True" Name="EfficientLampLEDBase" ParentName="BuildingBase">
     <thingClass>Building</thingClass>
     <category>Building</category>
@@ -104,6 +157,7 @@
       <Flammability>1.0</Flammability>
     </statBases>
   </ThingDef>
+  <!-- LED White Standing Lamp -->
   <ThingDef ParentName="EfficientLampLEDBase">
     <defName>EfficientLampLED</defName>
     <label>Standing lamp (LED)</label>
@@ -114,6 +168,58 @@
         <glowColor>(250,250,250,0)</glowColor>
       </li>
     </comps>
+    <researchPrerequisites>
+      <li>EfficientLampLEDs</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- LED Sun Lamp -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>EfficientSunLampLED</defName>
+    <label>sun lamp (LED)</label>
+    <thingClass>Building_SunLamp</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Production/LampSun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.4, 0.2)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>330</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <description>Efficiently lights an area brightly enough to grow crops.</description>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
     <researchPrerequisites>
       <li>EfficientLampLEDs</li>
     </researchPrerequisites>
