@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+._*
+
+# SublimeText
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+
+# Vim
+*~
+*.swp
+*.swo
