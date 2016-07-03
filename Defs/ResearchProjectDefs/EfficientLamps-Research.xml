@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+  <ResearchProjectDef>
+    <defName>EfficientLampCFLs</defName>
+    <label>Efficient lights: CFLs</label>
+    <description>Allows colonists to build power-efficient standing lamps using CFLs.</description>
+    <totalCost>500</totalCost>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>EfficientLampLEDs</defName>
+    <label>Efficient lights: LEDs</label>
+    <description>Allows colonists to build even more power-efficient standing lamps using LEDs.</description>
+    <totalCost>500</totalCost>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+      <li>EfficientLampCFLs</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</ResearchProjectDefs>
