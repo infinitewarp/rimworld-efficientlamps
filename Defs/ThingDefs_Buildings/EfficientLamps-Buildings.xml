@@ -19,7 +19,7 @@
     <designationCategory>Furniture</designationCategory>
     <rotatable>false</rotatable>
     <graphicData>
-      <texPath>Things/Building/Furniture/LampStanding</texPath>
+      <texPath>EfficientLamps/LampStandingCFL</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
@@ -130,7 +130,7 @@
     <designationCategory>Furniture</designationCategory>
     <rotatable>false</rotatable>
     <graphicData>
-      <texPath>Things/Building/Furniture/LampStanding</texPath>
+      <texPath>EfficientLamps/LampStandingLED</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
