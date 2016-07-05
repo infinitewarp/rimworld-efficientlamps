@@ -68,7 +68,7 @@
     <thingClass>Building_SunLamp</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Production/LampSun</texPath>
+      <texPath>EfficientLamps/LampSunCFL</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.2, 0.4, 0.2)</volume>
@@ -179,7 +179,7 @@
     <thingClass>Building_SunLamp</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Production/LampSun</texPath>
+      <texPath>EfficientLamps/LampSunLED</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.2, 0.4, 0.2)</volume>
