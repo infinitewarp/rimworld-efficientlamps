@@ -4,7 +4,8 @@
     <defName>EfficientLampCFLs</defName>
     <label>Efficient lights: CFLs</label>
     <description>Allows colonists to build power-efficient standing lamps using CFLs.</description>
-    <totalCost>500</totalCost>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>MicroelectronicsBasics</li>
     </prerequisites>
@@ -13,7 +14,8 @@
     <defName>EfficientLampLEDs</defName>
     <label>Efficient lights: LEDs</label>
     <description>Allows colonists to build even more power-efficient standing lamps using LEDs.</description>
-    <totalCost>500</totalCost>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>MicroelectronicsBasics</li>
       <li>EfficientLampCFLs</li>
