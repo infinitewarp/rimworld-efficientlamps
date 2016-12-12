@@ -19,7 +19,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>30</basePowerConsumption>
+        <basePowerConsumption>10</basePowerConsumption>
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
     </comps>
