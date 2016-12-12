@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Buildings>
   <!-- CFL Sun Lamp -->
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="LampBase">
     <defName>EfficientSunLampCFL</defName>
     <label>sun lamp (CFL)</label>
     <thingClass>Building_SunLamp</thingClass>
-    <category>Building</category>
     <graphicData>
       <texPath>EfficientLamps/LampSunCFL</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -17,21 +16,10 @@
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.15</fillPercent>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <WorkToMake>330</WorkToMake>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <selectable>true</selectable>
     <description>Efficiently lights an area brightly enough to grow crops.</description>
     <costList>
       <Steel>30</Steel>
     </costList>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <comps>
       <li Class="CompProperties_Glower">
         <overlightRadius>7.0</overlightRadius>
@@ -43,11 +31,8 @@
         <startElectricalFires>true</startElectricalFires>
         <basePowerConsumption>600</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
     </comps>
     <specialDisplayRadius>5.8</specialDisplayRadius>
-    <designationCategory>Misc</designationCategory>
-    <rotatable>false</rotatable>
     <researchPrerequisites>
       <li>EfficientLampCFLs</li>
     </researchPrerequisites>

@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Buildings>
-  <!-- Unfortunately, it seems I can't extend the abstract StandingLampBase and simply override power attributes. -->
-  <!-- TODO Figure out an implmentation that doesn't require copy-pasting the whole StandingLampBase to redefine it. -->
   <!-- LED Standing Lamps (abstract base) -->
-  <ThingDef Abstract="True" Name="EfficientLampLEDBase" ParentName="BuildingBase">
-    <thingClass>Building</thingClass>
-    <category>Building</category>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <selectable>true</selectable>
-    <fillPercent>0.20</fillPercent>
-    <pathCost>8</pathCost>
+  <ThingDef Abstract="True" Name="EfficientLampLEDBase" ParentName="LampBase">
     <costList>
       <Steel>25</Steel>
     </costList>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <designationCategory>Furniture</designationCategory>
-    <rotatable>false</rotatable>
     <graphicData>
       <texPath>EfficientLamps/LampStandingLED</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -36,17 +22,9 @@
         <basePowerConsumption>30</basePowerConsumption>
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
-      <li Class="CompProperties_Flickable"/>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
     </comps>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <WorkToMake>170</WorkToMake>
-      <Flammability>1.0</Flammability>
-    </statBases>
   </ThingDef>
+
   <!-- LED White Standing Lamp -->
   <ThingDef ParentName="EfficientLampLEDBase">
     <defName>EfficientLampLED</defName>
