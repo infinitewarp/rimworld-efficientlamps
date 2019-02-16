@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Buildings>
+<Defs>
   <!-- CFL Sun Lamp -->
   <ThingDef ParentName="LampBase">
     <defName>EfficientSunLampCFL</defName>
@@ -7,19 +7,14 @@
     <thingClass>Building_SunLamp</thingClass>
     <graphicData>
       <texPath>EfficientLamps/LampSunCFL</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shadowData>
-        <volume>(0.2, 0.4, 0.2)</volume>
-        <offset>(0,0,-0.1)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
     </graphicData>
     <description>Efficiently lights an area brightly enough to grow crops.</description>
     <costList>
       <Steel>30</Steel>
     </costList>
+    <statBases>
+      <Mass>4.5</Mass>
+    </statBases>
     <comps>
       <li Class="CompProperties_Glower">
         <overlightRadius>7.0</overlightRadius>
@@ -28,7 +23,6 @@
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
         <basePowerConsumption>600</basePowerConsumption>
       </li>
     </comps>
@@ -37,4 +31,4 @@
       <li>EfficientLampCFLs</li>
     </researchPrerequisites>
   </ThingDef>
-</Buildings>
+</Defs>

@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Buildings>
+<Defs>
   <!-- CFL Standing Lamps (abstract base) -->
   <ThingDef Abstract="True" Name="EfficientLampCFLBase" ParentName="LampBase">
     <costList>
       <Steel>20</Steel>
     </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
     <graphicData>
       <texPath>EfficientLamps/LampStandingCFL</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-        <offset>(0,0,-0.1)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
     </graphicData>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>30</basePowerConsumption>
+        <basePowerConsumption>20</basePowerConsumption>
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
     </comps>
@@ -40,4 +35,4 @@
       <li>EfficientLampCFLs</li>
     </researchPrerequisites>
   </ThingDef>
-</Buildings>
+</Defs>

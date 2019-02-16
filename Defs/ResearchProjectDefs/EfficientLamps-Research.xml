@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ResearchProjectDefs>
+<Defs>
   <ResearchProjectDef>
     <defName>EfficientLampCFLs</defName>
     <label>Efficient lights: CFLs</label>
@@ -21,4 +21,4 @@
       <li>EfficientLampCFLs</li>
     </prerequisites>
   </ResearchProjectDef>
-</ResearchProjectDefs>
+</Defs>

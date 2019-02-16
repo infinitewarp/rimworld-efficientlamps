@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Buildings>
+<Defs>
   <!-- LED Standing Lamps (abstract base) -->
   <ThingDef Abstract="True" Name="EfficientLampLEDBase" ParentName="LampBase">
     <costList>
       <Steel>25</Steel>
     </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
     <graphicData>
       <texPath>EfficientLamps/LampStandingLED</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-        <offset>(0,0,-0.1)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
     </graphicData>
     <comps>
       <li Class="CompProperties_Power">
@@ -40,4 +35,4 @@
       <li>EfficientLampLEDs</li>
     </researchPrerequisites>
   </ThingDef>
-</Buildings>
+</Defs>

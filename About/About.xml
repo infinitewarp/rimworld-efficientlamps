@@ -2,6 +2,6 @@
 <ModMetaData>
   <name>Efficient Lamps</name>
   <author>infinitewarp</author>
-  <targetVersion>0.15.1280</targetVersion>
+  <targetVersion>1.0.0</targetVersion>
   <description>Adds new research tasks that enable building power-efficient CFL and LED lamps.</description>
 </ModMetaData>
